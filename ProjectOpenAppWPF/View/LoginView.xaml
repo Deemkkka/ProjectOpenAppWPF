@@ -19,9 +19,9 @@
         <Border.Background>
             <ImageBrush ImageSource="/Images/image.jpg"/>
         </Border.Background>
-        <Border CornerRadius="15"
+        <Border CornerRadius="1"
             BorderThickness="3"
-            Opacity="0.92">
+            Opacity="0.96">
             <Border.BorderBrush>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                     <GradientStop Color="Gray" Offset="0"/>
@@ -140,7 +140,7 @@
                            Height="60"/>
 
                     <TextBlock Text="База знаний"
-                               Foreground="#7FFFD4"
+                               Foreground="#ADD8E6"
                                FontSize="21"
                                VerticalAlignment="Center"
                                HorizontalAlignment="Center"
@@ -176,7 +176,7 @@
                                         AlignmentX="Left"
                                         />
                         </TextBox.Background>
-                        
+
                     </TextBox>
 
 
@@ -210,8 +210,71 @@
 
                     </PasswordBox>
 
+
+                    <Button x:Name="btnLogin"
+                            BorderThickness="0"
+                            Content="Login"
+                            Foreground="Black"
+                            FontSize="12"
+                            FontFamily="Comic Sans MS"
+                            Cursor="Arrow"
+                            Margin="0,15,0,0"
+                            HorizontalAlignment="Center"
+                            Click="btnLogin_Click"
+                            >
+
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#B0C4DE"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#ADD8E6"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+
+
+                        </Button.Style>
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="150" Height="40"
+                                        CornerRadius="21"
+                                        Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Center"
+                                Margin="0,14,0,0">
+                        <TextBlock Text="Forgot password?"
+                           Foreground="LightGray"
+                           FontSize="12"
+                           FontWeight="Medium"
+                           FontFamily="Comic Sans MS"
+                           Cursor="Hand"
+                           />
+
+                        <TextBlock Text="Reset"
+                           Foreground="White"
+                           FontSize="12"
+                           FontWeight="Bold"
+                           FontFamily="Comic Sans MS"
+                           Cursor="Hand"
+                           Margin="10,0,0,0"
+                           />
+                    </StackPanel>
+
+
+
+
                 </StackPanel>
-                
+
+
 
 
 
