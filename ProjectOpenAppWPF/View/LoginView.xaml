@@ -4,7 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjectOpenAppWPF.View"
-        xmlns:VM="clr-namespace:ProjectOpenAppWPF.ViewModel"
+        xmlns:VM="clr-namespace:ProjectOpenAppWPF.ViewModel" 
+        xmlns:customcontrols="clr-namespace:ProjectOpenAppWPF.CustomControls"
         mc:Ignorable="d"
         Title="LoginView" 
         Height="450" 
@@ -203,26 +204,12 @@
                                Margin="0,15,0,0"
                                />
 
-                    <PasswordBox x:Name="textPassword"
-                             FontSize="15"
-                             FontWeight="Medium"
-                             FontFamily="Comic Sans MS"
-                             Margin="0,7,0,0"
-                             Foreground="#FFFAF0"
-                             CaretBrush="White"
-                             BorderBrush="LemonChiffon"
-                             BorderThickness="0,0,0,1"
-                             Height="33"
-                             VerticalContentAlignment="Center"
-                             Padding="35,0,0,0">
-                        <PasswordBox.Background>
-                            <ImageBrush ImageSource="/Images/password.ico"
-                                        Stretch="None"
-                                        AlignmentX="Left"
-                                        />
-                        </PasswordBox.Background>
+                    <customcontrols:BindablePasswordBox Password="{Binding Password}"
+                                                        Margin="0,7,0,0"
+                                                        Height="33">
 
-                    </PasswordBox>
+
+                    </customcontrols:BindablePasswordBox>
 
 
                     <Button x:Name="btnLogin"
