@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjectOpenAppWPF.View"
+        xmlns:VM="clr-namespace:ProjectOpenAppWPF.ViewModel"
         mc:Ignorable="d"
         Title="LoginView" 
         Height="450" 
@@ -15,6 +16,18 @@
         WindowStartupLocation="CenterScreen"
         MouseDown="Window_MouseDown">
 
+    <Window.DataContext>
+        <VM:LoginViewModel/>
+    </Window.DataContext>
+
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolenToVisibility"/>
+    </Window.Resources>
+    
+    <Window.Visibility>
+        <Binding Path="IsViewVisible" Converter="{StaticResource BoolenToVisibility}"/>
+    </Window.Visibility>
+    
     <Border CornerRadius="17">
         <Border.Background>
             <ImageBrush ImageSource="/Images/image.jpg"/>
@@ -159,6 +172,7 @@
                                />
 
                     <TextBox x:Name="textUser"
+                             Text="{Binding Username}"
                              FontSize="15"
                              FontWeight="Medium"
                              FontFamily="Comic Sans MS"

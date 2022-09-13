@@ -61,7 +61,7 @@ namespace ProjectOpenAppWPF.ViewModel
         public LoginViewModel()
         {
             LoginCommand = new RelayCommand(ExecuteLoginCommand, CanExecuteLoginCommand);
-            RecoverPasswordCommand = new RelayCommand(p => ExecuteRecoverPasswordCommand("", "");
+            RecoverPasswordCommand = new RelayCommand(p => ExecuteRecoverPasswordCommand("", ""));
         }
 
         private void ExecuteRecoverPasswordCommand(string username, string email)
