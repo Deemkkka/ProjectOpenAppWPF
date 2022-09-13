@@ -8,7 +8,7 @@
         xmlns:customcontrols="clr-namespace:ProjectOpenAppWPF.CustomControls"
         mc:Ignorable="d"
         Title="LoginView" 
-        Height="450" 
+        Height="550" 
         Width="500"
         WindowStyle="None"
         ResizeMode="NoResize"
@@ -211,6 +211,15 @@
 
                     </customcontrols:BindablePasswordBox>
 
+                    <TextBlock Text="{Binding ErrorMessage}"
+                               Foreground="#D32323"
+                               FontSize="17"
+                               VerticalAlignment="Center"
+                               FontFamily="Comic Sans MS"
+                               FontWeight="Medium"
+                               Margin="0,9,0,0"
+                               TextWrapping="Wrap"
+                               />
 
                     <Button x:Name="btnLogin"
                             Command="{Binding LoginCommand}"
@@ -220,7 +229,7 @@
                             FontSize="12"
                             FontFamily="Comic Sans MS"
                             Cursor="Arrow"
-                            Margin="0,15,0,0"
+                            Margin="0,25,0,0"
                             HorizontalAlignment="Center"
                             
                             >
