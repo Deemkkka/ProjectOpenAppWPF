@@ -213,6 +213,7 @@
 
 
                     <Button x:Name="btnLogin"
+                            Command="{Binding LoginCommand}"
                             BorderThickness="0"
                             Content="Login"
                             Foreground="Black"
@@ -221,7 +222,7 @@
                             Cursor="Arrow"
                             Margin="0,15,0,0"
                             HorizontalAlignment="Center"
-                            Click="btnLogin_Click"
+                            
                             >
 
                         <Button.Style>
